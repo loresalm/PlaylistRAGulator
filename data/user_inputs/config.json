@@ -1,0 +1,19 @@
+{
+    "embedmodel": "mxbai-embed-large",
+    "vismodel": "llava:7b",
+    "chroma_db_path": "./chroma_db",
+    "nb_songs": 25,
+    "dataset_in_path": "data/sonivar.csv",
+    "use_img": true,
+    "img_path": "/home/data/test2_img.jpg",
+    "img_small_path": "/home/data/test_img_small.jpg",
+    "img_w": 90,
+    "img_h":  120,
+    "img_desc_path": "/home/data/img_desc.txt",
+    "use_adj": true,
+    "adj_path": "data/adjectives.csv", 
+    "output_path": "data/output.csv",
+    "nb_row_embed": 150,
+    "songs_path": "data/musicoset/musicoset_metadata/songs.csv",
+    "features_path":"data/musicoset/musicoset_songfeatures/acoustic_features.csv"
+}

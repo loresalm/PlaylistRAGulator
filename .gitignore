@@ -169,3 +169,13 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+.DS_Store
+
+
+# ignore folders
+/ollama_models/blobs/
+/ollama_models/manifests/
+/data/chroma_db/
+/data/musicoset/
+/data/musicoset.zip
+/data/chroma_db.zip
