@@ -56,6 +56,7 @@ print("embeddings loaded")
 #  query the vect db #
 #                    #
 ######################
+print("committing")
 query = f"""
     I'm looking for a set of songs that: {prompt_adj}, {prompt_img}."""
 queryembed = ollama.embeddings(model=embedmodel, prompt=query)['embedding']
