@@ -13,7 +13,7 @@
     "use_adj": true,
     "adj_path": "data/user_inputs/adjectives.csv", 
     "output_path": "data/output.csv",
-    "nb_row_embed": 150,
+    "nb_row_embed": 5000,
     "songs_path": "data/musicoset/musicoset_metadata/songs.csv",
     "features_path":"data/musicoset/musicoset_songfeatures/acoustic_features.csv"
 }
