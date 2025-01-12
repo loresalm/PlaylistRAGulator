@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y python3 python3-pip curl sudo
 RUN pip install ollama
 RUN pip install llama-index
 RUN pip install chromadb
+RUN sudo apt-get install jq
 
 # Set the working directory for your project
 WORKDIR /home

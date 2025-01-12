@@ -178,7 +178,6 @@ cython_debug/
 /data/chroma_db/
 /data/musicoset/
 /data/musicoset.zip
-/data/chroma_db.zip
 blobs/sha256-7c658f9561e5dbbafb042a00f6a4de57877adddd957809111f3123e272632b4d
 blobs/sha256-72d6f08a42f656d36b356dbe0920675899a99ce21192fd66266fb7d82ed07539
 blobs/sha256-43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1

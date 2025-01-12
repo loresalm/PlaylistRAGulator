@@ -4,7 +4,7 @@ import json
 
 
 print("load config")
-config_file_path = 'data/config.json'
+config_file_path = 'data/user_inputs/config.json'
 with open(config_file_path, 'r') as json_file:
     config = json.load(json_file)
 # Assign the values to variables
