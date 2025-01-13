@@ -3,7 +3,7 @@
     "vismodel": "llava:7b",
     "chroma_db_path": "./chroma_db",
     "nb_songs": 25,
-    "dataset_in_path": "data/chroma_db/sonivar.csv",
+    "dataset_in_path": "data/musicoset.csv",
     "use_img": true,
     "img_path": "/home/data/user_inputs/sample_img.png",
     "img_small_path": "/home/data/sample_img_small.png",
