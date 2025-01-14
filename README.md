@@ -5,6 +5,9 @@
 ## About
 **PlaylistRAGulator** is a RAG AI app that matches your vibe. Drop in some text or an image, and it’ll curate a playlist that perfectly fits the mood. Effortless music discovery, one vibe at a time.
 
+## Local Execution
+**PlaylistRAGulator** is fully containerized using Docker, ensuring a seamless setup with minimal effort. All models run locally through **Ollama**, providing a secure and efficient environment. Once the Docker container is built, no additional installation is required—everything you need is bundled inside the container.
+
 ## How to Use
 
 ### 1. Docker Setup
@@ -76,8 +79,11 @@ The inputs can be found in the folder `data/user_inputs`.
 
 1. **Image Analysis:** If an image is provided, it is processed by the vision model (`llava:7b`) to generate a descriptive text that captures the atmosphere and mood.
 2. **Prompt Generation:** This description is combined with a user-provided list of adjectives (from `data/user_inputs/adjectives.csv`) to create a detailed prompt.
-3. **Music Matching:** The prompt is used to query the vector database (`chroma_db`) that contains embeddings of songs, selecting tracks that best match the mood.
+3. **Music Matching:** The prompt is used to query the vector database (`data/chroma_db`) that contains embeddings of songs, selecting tracks that best match the mood.
 
+Here you can find an example how the data flows into the pipeline.
+
+![Flow Diagram](doc/example.png)
 
 ---
 Enjoy discovering music that matches your vibe with **PlaylistRAGulator**! 🎶

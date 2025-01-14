@@ -1,7 +1,7 @@
 {
     "embedmodel": "mxbai-embed-large",
     "vismodel": "llava:7b",
-    "chroma_db_path": "./chroma_db",
+    "chroma_db_path": "data/chroma_db",
     "nb_songs": 25,
     "dataset_in_path": "data/musicoset.csv",
     "use_img": true,
