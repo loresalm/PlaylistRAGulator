@@ -18,6 +18,7 @@
 
 ### 2. Download Models
 - Run the following command to download the required models:
+> ⚠️ **Note:** Update file paths to match your local **PlaylistRAGulator** folder.
   ```bash
   docker run --rm \
     -v /path/to/PlaylistRAGulator/ollama_models:/root/.ollama/models \
@@ -25,12 +26,14 @@
     playlistragulator bash pull_models.sh
   ```
 
+
 ### 3. Generate Playlist
 - Unzip the database:
   ```bash
   unzip data/chroma_db.zip
   ```
 - Run the playlist generator:
+> ⚠️ **Note:** Update file paths to match your local **PlaylistRAGulator** folder.
   ```bash
   docker run --rm \
     -v /path/to/PlaylistRAGulator/ollama_models:/root/.ollama/models \
@@ -84,6 +87,30 @@ The inputs can be found in the folder `data/user_inputs`.
 Here you can find an example how the data flows into the pipeline.
 
 ![Flow Diagram](doc/example.png)
+
+## Data & Customizing the Vector Database
+
+The vector database used by **PlaylistRAGulator** is built from the [Musicoset Dataset](https://marianaossilva.github.io/DSW2019/). To customize the database:
+
+1. **Download the Dataset:** Place the dataset in the `data` folder.
+
+2. **Run Preprocessing:** Execute the following command to preprocess the data and create the vector database:
+> ⚠️ **Note:** Update file paths to match your local 
+   ```bash
+   docker run --rm \
+     -v /Users/lorenzosalmina/Desktop/PlaylistRAGulator/ollama_models:/root/.ollama/models \
+     -v /Users/lorenzosalmina/Desktop/PlaylistRAGulator:/home \
+     playlistragulator bash setup.sh
+   ```
+
+3. **What Happens:**
+   - The `preprocessing.py` script generates `musicoset.csv` with song titles and features.
+   - The `make_vector_db.py` script embeds each row of `musicoset.csv` to create the vector database.
+   - You can control how many rows are embedded by adjusting the `"nb_row_embed"` field in `data/user_inputs/config.json`.
+   
+4. **Result:**
+   - A new folder `data/chroma_db` is created, containing the embedded songs and features.
+   - To customize the dataset or features, modify the `preprocessing.py` script.
 
 ---
 Enjoy discovering music that matches your vibe with **PlaylistRAGulator**! 🎶

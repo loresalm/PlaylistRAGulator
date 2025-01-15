@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Start the Ollama server in the background
+echo "Starting Ollama server..."
+ollama serve &
+
 # Execute the Python script
 echo "Running dataset preprocessing script..."
 python3 python_scripts/preprocessing.py

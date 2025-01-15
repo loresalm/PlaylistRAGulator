@@ -33,7 +33,6 @@ except Exception as e:
 chroma_collection = chroma_client.get_or_create_collection("mydocs")
 sonivar_df = pd.read_csv(dataset_in_path)
 
-nb_row_embed = int(len(sonivar_df))
 print(f"embedding {nb_row_embed} songs")
 
 for index, row in sonivar_df[:nb_row_embed].iterrows():
