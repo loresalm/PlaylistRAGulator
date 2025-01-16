@@ -1,5 +1,10 @@
 # PlaylistRAGulator
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue?logo=docker&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-Bash-blue?logo=gnu-bash&logoColor=white)
+
+
 ![Flow Diagram](doc/intro.png)
 
 ## About
